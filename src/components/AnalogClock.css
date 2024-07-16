@@ -1,0 +1,73 @@
+.analog-clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.analog-clock {
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+    box-shadow: 0px 0px 50px 10px rgb(177, 177, 177);
+    border-radius: 50%;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.clock-face {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.hand {
+    width: 50%;
+    border-radius: 50% 0% 0% 50%;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: translateX(-50%);
+}
+
+.hour-hand {
+    height: 7px;
+    background: blue;
+}
+
+.minute-hand {
+    height: 4px;
+    background: blue;
+}
+
+.second-hand {
+    height: 4px;
+    background: black;
+}
+
+.hour-mark {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: center center;
+}
+
+.mark {
+    width: 2px;
+    height: 20px;
+    background: orange;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.digital-clock {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: black;
+}

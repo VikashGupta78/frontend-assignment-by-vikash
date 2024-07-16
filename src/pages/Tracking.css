@@ -1,0 +1,71 @@
+/* Tracking.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.tracking-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
+
+.timer {
+    margin: 20px 0;
+}
+
+.start-button, .reset-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover, .reset-button:hover {
+    background-color: #e69500;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+@media (max-width: 480px) {
+    .tracking-screen {
+        padding: 10px;
+    }
+
+    .timer {
+        width: 80%;
+        text-align: center;
+    }
+
+    .start-button, .reset-button {
+        width: 80%;
+        margin: 5px 0;
+    }
+
+    .button-container {
+        gap: 1rem;
+        align-items: center;
+    }
+}
