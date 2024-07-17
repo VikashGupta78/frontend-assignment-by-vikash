@@ -3,6 +3,7 @@ import './LoginForm.css';
 import { useState } from 'react';
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
 
 function SignupForm() {
     const navigate = useNavigate();
@@ -25,10 +26,11 @@ function SignupForm() {
     function submitHandler(e) {
         e.preventDefault();
         if (formData.agreeToTerms) {
-            console.log(formData);
+            // console.log(formData);
             navigate("/postLogin");
+            toast.success("Account created");
         } else {
-            alert("You must agree to the Terms of Service and Privacy Policy");
+            toast.warning("You must agree to the Terms of Service and Privacy Policy");
         }
     }
 

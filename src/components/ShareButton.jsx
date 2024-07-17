@@ -1,12 +1,13 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { toast } from 'react-toastify';
 
 const ShareButton = ({ speed }) => {
     const handleShare = () => {
         const uniqueId = uuidv4();
         const url = `${window.location.origin}/tracking?speed=${speed}&id=${uniqueId}`;
         navigator.clipboard.writeText(url);
-        alert('URL copied to clipboard!');
+        toast.success('URL copied to clipboard!');
     };
 
     return (

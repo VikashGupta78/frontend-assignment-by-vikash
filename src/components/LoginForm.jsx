@@ -3,6 +3,7 @@ import './LoginForm.css'
 import { useState } from 'react';
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
 
 function LoginForm() {
     const navigate = useNavigate();
@@ -21,10 +22,9 @@ function LoginForm() {
 
     function submitHandler(e) {
         e.preventDefault();
-        // setIsLoggedin((prev) => !prev);
-        console.log(formData);
+        // console.log(formData);
         navigate("/postLogin");
-        // toast.success("Account created");
+        toast.success("Successfully logged in");
     }
     return (
         <div>

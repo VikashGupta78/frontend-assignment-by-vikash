@@ -7,6 +7,8 @@ import Signup from './pages/Signup';
 import PostLogin from './pages/PostLogin';
 import Tracking from './pages/Tracking';
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route path='/postLogin' element= <PostLogin/> />
         <Route path='/tracking' element= <Tracking/> />
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
