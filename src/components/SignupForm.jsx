@@ -43,6 +43,7 @@ function SignupForm() {
                         required
                         type="email"
                         name='email'
+                        placeholder='Enter Email'
                         onChange={changeHandler}
                         value={formData.email}
                         className="form-input"
@@ -54,6 +55,7 @@ function SignupForm() {
                         required
                         type="text"
                         name='userName'
+                        placeholder='Username'
                         onChange={changeHandler}
                         value={formData.userName}
                         className="form-input"
@@ -66,6 +68,7 @@ function SignupForm() {
                             required
                             type={showPassword ? "text" : "password"}
                             name='password'
+                            placeholder='Password'
                             onChange={changeHandler}
                             value={formData.password}
                             className="form-input"

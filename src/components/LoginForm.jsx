@@ -35,6 +35,7 @@ function LoginForm() {
                         required
                         type="email"
                         name='email'
+                        placeholder='Enter Email'
                         onChange={changeHandler}
                         value={formData.email}
                         className="form-input"
@@ -47,6 +48,7 @@ function LoginForm() {
                             required
                             type={showPassword ? "text" : "password"}
                             name='password'
+                            placeholder='Password'
                             onChange={changeHandler}
                             value={formData.password}
                             className="form-input"
