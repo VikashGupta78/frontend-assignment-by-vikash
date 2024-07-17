@@ -8,9 +8,14 @@ import { VscDebugRestart } from "react-icons/vsc";
 import './Tracking.css';
 import Statusbar from '../components/Statusbar';
 import Slider from '../components/slider';
+import { useLocation } from 'react-router-dom';
 
 function Tracking() {
-    const [speed, setSpeed] = useState(1);
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const initialSpeed = parseFloat(searchParams.get('speed')) || 1;
+
+    const [speed, setSpeed] = useState(initialSpeed);
     const [isRunning, setIsRunning] = useState(true);
     const [resetKey, setResetKey] = useState(0);
     const [countdownFinished, setCountdownFinished] = useState(false);

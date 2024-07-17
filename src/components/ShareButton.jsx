@@ -1,8 +1,10 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const ShareButton = ({ speed }) => {
     const handleShare = () => {
-        const url = `${window.location.origin}/tracking?speed=${speed}`;
+        const uniqueId = uuidv4();
+        const url = `${window.location.origin}/tracking?speed=${speed}&id=${uniqueId}`;
         navigator.clipboard.writeText(url);
         alert('URL copied to clipboard!');
     };
